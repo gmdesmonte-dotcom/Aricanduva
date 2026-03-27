@@ -38,6 +38,14 @@ header .logo {
     left:20px;
     top:50%;
     transform: translateY(-50%);
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+    header .logo span {
+    font-size:18px;
+    font-weight:bold;
+    color:#fff;
 }
 header .logo img { height:50px; }
 header nav {
@@ -167,7 +175,10 @@ footer {
 <body>
 
 <header>
-    <div class="logo"><img src="logo.png" alt="Logo Tranzcarro"></div>
+    <div class="logo">
+    <img src="logo.png" alt="Logo Tranzcarro">
+    <span>Tranzcarro</span>
+</div>
     <nav>
         <div class="menu">
             <a href="#servicos">Serviços</a>
