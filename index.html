@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tranzcarro Transportes | Transporte de Veículos no Brasil</title>
-<meta name="description" content="Transporte de veículos em todo o Brasil com segurança e agilidade. Solicite sua cotação agora.">
+<meta name="description" content="Transporte de veículos em todo o Brasil com segurança e planejamento logístico. Solicite sua cotação.">
 
 <style>
-/* PALETA */
 :root {
     --azul: #1E3A5F;
     --azul-claro: #2E5C8A;
@@ -17,11 +16,9 @@
     --texto: #333;
 }
 
-/* RESET */
 * {margin:0;padding:0;box-sizing:border-box;}
 body { font-family: Arial, sans-serif; color: var(--texto); }
 
-/* HEADER FIXO COM LOGO NO CANTO ESQUERDO */
 header {
     background: var(--azul);
     color:#fff;
@@ -33,6 +30,7 @@ header {
     align-items:center;
     justify-content:flex-end;
 }
+
 header .logo {
     position: absolute;
     left:20px;
@@ -42,57 +40,56 @@ header .logo {
     align-items:center;
     gap:10px;
 }
-    header .logo span {
+
+header .logo span {
     font-size:18px;
     font-weight:bold;
     color:#fff;
 }
+
 header .logo img { height:50px; }
-header nav {
-    margin-left:auto;
-}
+
 header .menu {
     display:flex;
     gap:30px;
 }
+
 header .menu a {
     color:#fff;
     text-decoration:none;
     font-weight:bold;
-    font-size:16px;
 }
 
-/* BANNER FULL WIDTH */
+/* BANNER */
 .banner {
     width:100%;
-    height:400px; /* altura do banner */
+    height:400px;
     background: url('baneer.png') center center no-repeat;
-    background-size: cover; /* preenche todo o espaço mantendo proporção */
+    background-size: cover;
 }
 
-/* TEXTO ABAIXO DO BANNER */
+/* TEXTO */
 .banner-texto { 
     text-align:center; 
     padding:40px 20px; 
     background:#f4f6f8; 
 }
+
 .banner-texto h1 { 
     margin-bottom:15px; 
     color: var(--azul); 
-    font-size:32px; 
 }
+
 .banner-texto p { 
-    margin-bottom:25px; 
-    font-size:18px; 
-    color: var(--texto); 
+    margin-bottom:15px; 
 }
+
 .banner-texto .btn { 
     background: var(--verde); 
     color:#fff; 
     padding:12px 25px; 
     border-radius:6px; 
     font-weight:bold; 
-    font-size:16px; 
     text-decoration:none;
 }
 
@@ -108,31 +105,59 @@ section { padding:60px 20px; max-width:1100px; margin:auto; text-align:center; }
 .passos div { background: var(--cinza); padding:15px; border-left:5px solid var(--verde); border-radius:6px; }
 
 /* GALERIA */
-.carousel { display:flex; overflow-x:auto; gap:15px; scroll-snap-type:x mandatory; }
-.carousel::-webkit-scrollbar { display:none; }
-.item { min-width:280px; scroll-snap-align:start; }
-.item img { width:100%; border-radius:8px; }
+.carousel { display:flex; overflow-x:auto; gap:15px; }
+.carousel img { width:280px; border-radius:8px; }
 
 /* AVALIAÇÕES */
 .avaliacoes { display:grid; gap:20px; }
 .box { background: var(--cinza); padding:15px; border-left:5px solid var(--azul-claro); border-radius:6px; text-align:left; }
 
 /* FORMULÁRIO */
-form input, form button { width:100%; max-width:400px; margin:10px auto; padding:12px; border-radius:6px; border:1px solid #ccc; display:block; }
-form button { background: var(--verde); color:#fff; font-weight:bold; cursor:pointer; }
-form label { display:flex; align-items:center; max-width:400px; margin:10px auto; font-size:14px; }
+form input, form button {
+    width:100%;
+    max-width:400px;
+    margin:10px auto;
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    display:block;
+}
+
+form button {
+    background: var(--verde);
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+form label {
+    display:flex;
+    align-items:center;
+    max-width:400px;
+    margin:10px auto;
+    font-size:14px;
+}
+
 form label input { margin-right:10px; }
 
-/* WHATSAPP */
-.whatsapp { position:fixed; bottom:20px; right:20px; background: var(--verde); color:#fff; padding:14px 20px; border-radius:6px; text-decoration:none; font-weight:bold; }
+/* WHATS */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background: var(--verde);
+    color:#fff;
+    padding:14px 20px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
 /* FOOTER */
-
 footer {
     background: var(--azul);
     color:#fff;
     padding:30px 20px;
-    text-align:left;
 }
 
 .footer-links {
@@ -148,163 +173,161 @@ footer {
     font-size:14px;
 }
 
-.footer-links a:hover {
-    color:#ccc;
-}
-
 /* RESPONSIVO */
 @media(max-width:768px){
     header {
         flex-direction: column;
         align-items:flex-start;
-        padding:15px 10px;
     }
     header .logo {
         position: static;
         transform: none;
         margin-bottom:10px;
     }
-    header nav { width:100%; }
-    header .menu { flex-wrap:wrap; gap:15px; justify-content:flex-start; }
-    .banner { height:250px; } /* altura menor no mobile */
-    .banner-texto h1 { font-size:24px; }
-    .banner-texto p { font-size:14px; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">
-    <img src="logo.png" alt="Logo Tranzcarro">
-    <span>Tranzcarro Transportes</span>
+<div class="logo">
+<img src="logo.png" alt="Logo Tranzcarro">
+<span>Tranzcarro Transportes</span>
 </div>
-    <nav>
-        <div class="menu">
-            <a href="#servicos">Serviços</a>
-            <a href="#como">Como Funciona</a>
-            <a href="#avaliacoes">Avaliações</a>
-            <a href="#contato">Contato</a>
-        </div>
-    </nav>
+
+<div class="menu">
+<a href="#servicos">Serviços</a>
+<a href="#como">Como Funciona</a>
+<a href="#avaliacoes">Avaliações</a>
+<a href="#contato">Contato</a>
+</div>
 </header>
 
-<!-- BANNER FULL WIDTH -->
 <section class="banner"></section>
 
-<!-- TEXTO ABAIXO DO BANNER -->
 <section class="banner-texto">
-    <h1>Transporte de Veículos para Todo o Brasil</h1>
-    <p>Transporte de veículos para todo o Brasil com segurança, agilidade e atendimento profissional</p>
-    <a href="https://wa.me/5511972531443" class="btn">Falar no WhatsApp</a>
+<h1>Transporte de Veículos para Todo o Brasil</h1>
+<p>Transporte de veículos com segurança, planejamento logístico e atendimento profissional.</p>
+
+<p><strong>O prazo e o valor do transporte variam conforme a origem, destino e tipo do veículo.</strong></p>
+
+<a href="https://wa.me/5511972531443" class="btn">Falar no WhatsApp</a>
 </section>
 
 <section id="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="servicos">
-        <div class="servico-box">
-            <h3>🚗 Transporte de Carros</h3>
-            <p>Coleta e entrega com planejamento logístico e segurança.</p>
-        </div>
-        <div class="servico-box">
-            <h3>🏍 Transporte de Motos</h3>
-            <p>Equipamentos adequados para máxima proteção.</p>
-        </div>
-        <div class="servico-box">
-            <h3>🚙 Utilitários</h3>
-            <p>Transporte de veículos maiores com estrutura especializada.</p>
-        </div>
-        <div class="servico-box">
-            <h3>📍 Interestadual</h3>
-            <p>Atendemos todo o território nacional.</p>
-        </div>
-    </div>
+<h2>Nossos Serviços</h2>
+
+<div class="servicos">
+<div class="servico-box">
+<h3>🚗 Transporte de Carros</h3>
+<p>Coleta e entrega com planejamento logístico e segurança.</p>
+</div>
+
+<div class="servico-box">
+<h3>🏍 Transporte de Motos</h3>
+<p>Equipamentos adequados para proteção do veículo.</p>
+</div>
+
+<div class="servico-box">
+<h3>🚙 Utilitários</h3>
+<p>Transporte de veículos maiores com estrutura adequada.</p>
+</div>
+
+<div class="servico-box">
+<h3>📍 Interestadual</h3>
+<p>Atendemos todo o território nacional.</p>
+</div>
+</div>
 </section>
 
 <section id="como">
-    <h2>Como Funciona</h2>
-    <div class="passos">
-        <div>1. Solicite sua cotação</div>
-        <div>2. Planejamento da rota</div>
-        <div>3. Coleta do veículo</div>
-        <div>4. Transporte seguro</div>
-        <div>5. Entrega no destino</div>
-    </div>
+<h2>Como Funciona</h2>
+<div class="passos">
+<div>1. Solicite sua cotação</div>
+<div>2. Planejamento da rota</div>
+<div>3. Coleta do veículo</div>
+<div>4. Transporte seguro</div>
+<div>5. Entrega no destino</div>
+</div>
 </section>
 
 <section>
-    <h2>Operações Realizadas</h2>
-    <div class="carousel">
-        <div class="item"><img src="img.png" alt=""></div>
-        <div class="item"><img src="img2.png" alt=""></div>
-        <div class="item"><img src="img3.png" alt=""></div>
-        <div class="item"><img src="img4.png" alt=""></div>
-    </div>
+<h2>Operações Realizadas</h2>
+<div class="carousel">
+<img src="img.png">
+<img src="img2.png">
+<img src="img3.png">
+<img src="img4.png">
+</div>
 </section>
 
 <section id="avaliacoes">
-    <h2>Avaliações</h2>
-    <div class="avaliacoes">
-     <div class="box">⭐⭐⭐⭐⭐ João Silva - Transporte de SP para RJ, chegou antes do prazo.</div>
-<div class="box">⭐⭐⭐⭐⭐ Mariana Souza - Atendimento rápido e direto no WhatsApp.</div>
-<div class="box">⭐⭐⭐⭐⭐ Carlos Mendes - Empresa confiável, recomendo.</div>
-<div class="box">⭐⭐⭐⭐⭐ Fernanda Lima - Veículo entregue sem nenhum problema.</div>
-<div class="box">⭐⭐⭐⭐⭐ Ricardo Alves - Excelente serviço.</div>
-    </div>
+<h2>Avaliações</h2>
+
+<div class="avaliacoes">
+<div class="box">⭐⭐⭐⭐⭐ Cliente - São Paulo/SP (SP → RJ)</div>
+<div class="box">⭐⭐⭐⭐⭐ Cliente - Minas Gerais (entrega no prazo)</div>
+<div class="box">⭐⭐⭐⭐⭐ Cliente - Paraná (atendimento rápido)</div>
+<div class="box">⭐⭐⭐⭐⭐ Cliente - Goiás (transporte seguro)</div>
+</div>
 </section>
 
 <section id="contato">
-    <h2>Solicitar Cotação</h2>
-    <form action="https://formsubmit.co/contato.tranzcarros@gmail.com" method="POST">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="tel" name="telefone" placeholder="WhatsApp" required>
-        <input type="text" name="origem" placeholder="Origem" required>
-        <input type="text" name="destino" placeholder="Destino" required>
-        <input type="hidden" name="_captcha" value="true">
-        <label>
-            <input type="checkbox" required>
-            Eu li e concordo com os <a href="termos.html" target="_blank">Termos de Uso</a> e a 
-            <a href="politica.html" target="_blank">Política de Privacidade</a>
-        </label>
-        <button type="submit">Enviar</button>
-    </form>
-    <p>📧 contato@tranzcarro.online</p>
-    <p>📞 (11) 97253-1443</p>
-    <p> 📍 Vila Aricanduva - São Paulo - SP </p>
+<h2>Solicitar Cotação</h2>
+
+<form action="https://formsubmit.co/contato@tranzcarro.online" method="POST">
+<input type="text" name="nome" placeholder="Nome" required>
+<input type="tel" name="telefone" placeholder="WhatsApp" required>
+<input type="text" name="origem" placeholder="Origem" required>
+<input type="text" name="destino" placeholder="Destino" required>
+
+<input type="hidden" name="_captcha" value="true">
+
+<label>
+<input type="checkbox" required>
+Eu li e concordo com os 
+<a href="termos.html" target="_blank">Termos de Uso</a> e 
+<a href="politica.html" target="_blank">Política de Privacidade</a>
+</label>
+
+<button type="submit">Enviar</button>
+</form>
+
+<p>📧 contato@tranzcarro.online</p>
+<p>📞 (11) 97253-1443</p>
+<p>📍 Vila Aricanduva - São Paulo - SP</p>
 </section>
 
-<a href="https://wa.me/5511972531443?text=Olá%20quero%20fazer%20uma%20cotação%20de%20transporte" class="whatsapp"> Falar no WhatsApp</a>
+<a href="https://wa.me/5511972531443?text=Olá%20quero%20fazer%20uma%20cotação%20de%20transporte" class="whatsapp">WhatsApp</a>
 
 <section>
-  <h2>Localização</h2>
+<h2>Localização</h2>
 
-  <p>📍 R. José Mascarenhas, 704 - Vila Aricanduva, São Paulo - SP, 03515-000</p>
+<p>📍 R. José Mascarenhas, 704 - Vila Aricanduva, São Paulo - SP</p>
 
-  <iframe 
-    src="https://www.google.com/maps?q=R.+José+Mascarenhas,+704+-+Vila+Aricanduva,+São+Paulo+-+SP,+03515-000&output=embed"
-    width="100%" 
-    height="300" 
-    style="border:0;" 
-    loading="lazy">
-  </iframe>
+<iframe 
+src="https://www.google.com/maps?q=R.+José+Mascarenhas,+704+-+São+Paulo&output=embed"
+width="100%" 
+height="300" 
+style="border:0;" 
+loading="lazy">
+</iframe>
 
 </section>
 
 <footer>
+<p><strong>Tranzcarro Transportes LTDA</strong></p>
+<p>CNPJ: 01.672.629/0001-40</p>
+<p>São Paulo - SP</p>
 
-    <p><strong>Tranzcarro Transportes LTDA</strong></p>
-    <p>CNPJ: 01.672.629/0001-40</p>
-    <p>São Paulo - SP</p>
-
-    <div class="footer-links">
-        <a href="sobre.html">Sobre Nós</a>
-        <a href="termos.html">Termos de Uso</a>
-        <a href="politica.html">Política de Privacidade</a>
-        <a href="cnpj.html">Consultar CNPJ</a>
-    </div>
+<div class="footer-links">
+<a href="sobre.html">Sobre Nós</a>
+<a href="termos.html">Termos de Uso</a>
+<a href="politica.html">Política de Privacidade</a>
+</div>
 
 <p>Atendimento de segunda a sábado, das 8h às 18h.</p>
-
 </footer>
 
 </body>
