@@ -5,16 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tranzcarro Transportes | Transporte de Veículos no Brasil</title>
-    <!-- Google tag (gtag.js) -->
+
+<!-- Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18046562239"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18046562239');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18046562239');
 </script>
+
 <meta name="description" content="Transporte de veículos em todo o Brasil com segurança e planejamento logístico. Solicite sua cotação.">
+<meta name="keywords" content="transporte de veículos, cegonha, transporte de carros, transporte interestadual">
 
 <style>
 :root {
@@ -73,7 +75,7 @@ header .menu a {
 .banner {
     width:100%;
     height:250px;
-    background: url('baneer.png') center center no-repeat;
+    background: url('banner.png') center center no-repeat;
     background-size: cover;
 }
 
@@ -134,7 +136,7 @@ form button {
     cursor:pointer;
 }
 
-/* LABEL DO TERMO - versão limpa e profissional */
+/* CHECKBOX */
 form label {
     display: flex;
     align-items: flex-start;
@@ -146,7 +148,6 @@ form label {
     text-align: left;
 }
 
-/* CHECKBOX alinhamento perfeito */
 form label input[type="checkbox"] {
     width: 16px;
     height: 16px;
@@ -155,7 +156,6 @@ form label input[type="checkbox"] {
     cursor: pointer;
 }
 
-/* LINKS dentro do termo */
 form label a {
     color: var(--azul);
     text-decoration: underline;
@@ -235,18 +235,19 @@ footer {
 <h1>Transporte de Veículos para Todo o Brasil</h1>
 <p>Transporte de veículos com segurança, planejamento logístico e atendimento profissional.</p>
 <p><strong>O prazo e o valor do transporte variam conforme a origem, destino e tipo do veículo.</strong></p>
-<a href="https://wa.me/5511972531443" class="btn">Falar no WhatsApp</a>
+<a href="https://wa.me/5511972531443" class="btn">Solicitar Cotação Agora</a>
 </section>
 
 <section>
 <h2>Sobre a Tranzcarro</h2>
 <p>Somos uma empresa especializada no transporte de veículos em todo o Brasil, oferecendo soluções logísticas com segurança, planejamento e transparência.</p>
-<p>Atuamos com organização de rotas, acompanhamento do transporte e atendimento direto ao cliente em todas as etapas.</p>
+<p><strong>+500 veículos transportados com segurança</strong></p>
 </section>
 
 <section id="servicos">
 <h2>Nossos Serviços</h2>
 <div class="servicos">
+
 <div class="servico-box">
 <h3>🚗 Transporte de Carros</h3>
 <p>Coleta e entrega com planejamento logístico e segurança.</p>
@@ -266,6 +267,7 @@ footer {
 <h3>📍 Interestadual</h3>
 <p>Atendemos todo o território nacional.</p>
 </div>
+
 </div>
 </section>
 
@@ -292,7 +294,6 @@ footer {
 
 <section id="faq">
 <h2>Perguntas Frequentes</h2>
-
 <div class="faq">
 
 <div class="faq-item">
@@ -302,17 +303,12 @@ footer {
 
 <div class="faq-item">
 <h4>Qual o prazo de entrega?</h4>
-<p>O prazo varia conforme a distância e logística da rota, sendo informado na cotação.</p>
-</div>
-
-<div class="faq-item">
-<h4>O veículo vai segurado?</h4>
-<p>Trabalhamos com transporte planejado e orientamos o cliente sobre as condições no momento da contratação.</p>
+<p>O prazo varia conforme a distância e logística da rota.</p>
 </div>
 
 <div class="faq-item">
 <h4>Atende todo o Brasil?</h4>
-<p>Sim, realizamos transporte interestadual em diversas rotas.</p>
+<p>Sim, realizamos transporte interestadual.</p>
 </div>
 
 </div>
@@ -322,55 +318,52 @@ footer {
 <h2>Solicitar Cotação</h2>
 
 <form id="formCotacao">
+<input type="text" id="nome" placeholder="Seu nome" required>
+<input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
+<input type="text" id="origem" placeholder="Cidade de origem" required>
+<input type="text" id="destino" placeholder="Cidade de destino" required>
 
-  <input type="text" id="nome" placeholder="Seu nome" required>
-  <input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
-  <input type="text" id="origem" placeholder="Cidade de origem" required>
-  <input type="text" id="destino" placeholder="Cidade de destino" required>
+<label>
+<input type="checkbox" required>
+Eu concordo com os <a href="termos.html" target="_blank">Termos</a> e <a href="politica.html" target="_blank">Privacidade</a>
+</label>
 
-  <label class="check">
-    <input type="checkbox" required>
-    Eu concordo com os 
-    <a href="termos.html" target="_blank">Termos</a> e 
-    <a href="politica.html" target="_blank">Privacidade</a>
-  </label>
-
-  <button type="submit">Solicitar Cotação</button>
-
+<button type="submit">Solicitar Cotação</button>
 </form>
 
 <script>
 document.getElementById("formCotacao").addEventListener("submit", function(e){
-  e.preventDefault();
+e.preventDefault();
 
-  let nome = document.getElementById("nome").value;
-  let telefone = document.getElementById("telefone").value;
-  let origem = document.getElementById("origem").value;
-  let destino = document.getElementById("destino").value;
+let nome = document.getElementById("nome").value;
+let telefone = document.getElementById("telefone").value;
+let origem = document.getElementById("origem").value;
+let destino = document.getElementById("destino").value;
 
-  let msg = `Olá, quero uma cotação:%0A
-Nome: ${nome}%0A
-Telefone: ${telefone}%0A
-Origem: ${origem}%0A
-Destino: ${destino}`;
+let msg = `Olá, quero uma cotação:\nNome: ${nome}\nTelefone: ${telefone}\nOrigem: ${origem}\nDestino: ${destino}`;
+msg = encodeURIComponent(msg);
 
-  let numero = "5511972531443";
+let numero = "5511972531443";
 
-  window.open(`https://wa.me/${numero}?text=${msg}`, "_blank");
+gtag('event', 'conversion', {
+'send_to': 'AW-18046562239/ohCyCP7cg5EcEL_fop1D'
+});
+
+window.open(`https://wa.me/${numero}?text=${msg}`, "_blank");
 });
 </script>
 
 <p>📧 contato@tranzcarro.online</p>
 <p>📞 (11) 97253-1443</p>
-<p>📍 Vila Aricanduva - São Paulo - SP</p>
+<p>📍 São Paulo - SP</p>
 
 </section>
-<a href="https://wa.me/5511972531443?text=Olá%20quero%20fazer%20uma%20cotação%20de%20transporte" class="whatsapp">WhatsApp</a>
+
+<a href="https://wa.me/5511972531443" class="whatsapp">WhatsApp</a>
 
 <section>
 <h2>Localização</h2>
 <p>📍 R. José Mascarenhas, 704 - São Paulo - SP</p>
-</section>
 <iframe 
 src="https://www.google.com/maps?q=R.+José+Mascarenhas,+704+-+São+Paulo&output=embed"
 width="100%" 
@@ -383,7 +376,6 @@ loading="lazy">
 <footer>
 <p><strong>Tranzcarro Transportes LTDA</strong></p>
 <p>CNPJ: 01.672.629/0001-40</p>
-<p>São Paulo - SP</p>
 
 <div class="footer-links">
 <a href="sobre.html">Sobre Nós</a>
@@ -391,17 +383,17 @@ loading="lazy">
 <a href="politica.html">Política de Privacidade</a>
 </div>
 
-<p>Atendimento de segunda a sábado, das 8h às 18h.</p>
 </footer>
 
 <script>
 document.querySelectorAll('a[href*="wa.me"]').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-18046562239/ohCyCP7cg5EcEL_fop1D'
-    });
-  });
+btn.addEventListener('click', function() {
+gtag('event', 'conversion', {
+'send_to': 'AW-18046562239/ohCyCP7cg5EcEL_fop1D'
+});
+});
 });
 </script>
+
 </body>
 </html>
