@@ -321,32 +321,44 @@ footer {
 <section id="contato">
 <h2>Solicitar Cotação</h2>
 
-<form action="obrigado.html" method="GET">
+<form id="formCotacao">
 
-  <input type="text" name="nome" placeholder="Seu nome" required>
+  <input type="text" id="nome" placeholder="Seu nome" required>
+  <input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
+  <input type="text" id="origem" placeholder="Cidade de origem" required>
+  <input type="text" id="destino" placeholder="Cidade de destino" required>
 
-  <input type="tel" name="telefone" placeholder="Seu WhatsApp" required>
-
-  <input type="text" name="origem" placeholder="Cidade de origem" required>
-
-  <input type="text" name="destino" placeholder="Cidade de destino" required>
-
-  <input type="hidden" name="_captcha" value="true">
-
-  <label>
-    <input type="checkbox" name="aceite" required>
-    Eu li e concordo com os 
-    <a href="termos.html" target="_blank">Termos de Uso</a> e 
-    <a href="politica.html" target="_blank">Política de Privacidade</a>
+  <label class="check">
+    <input type="checkbox" required>
+    Eu concordo com os 
+    <a href="termos.html" target="_blank">Termos</a> e 
+    <a href="politica.html" target="_blank">Privacidade</a>
   </label>
-
-  <p class="privacidade">
-    Seus dados são utilizados exclusivamente para contato sobre a sua solicitação e não serão compartilhados com terceiros.
-  </p>
 
   <button type="submit">Solicitar Cotação</button>
 
 </form>
+
+<script>
+document.getElementById("formCotacao").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let nome = document.getElementById("nome").value;
+  let telefone = document.getElementById("telefone").value;
+  let origem = document.getElementById("origem").value;
+  let destino = document.getElementById("destino").value;
+
+  let msg = `Olá, quero uma cotação:%0A
+Nome: ${nome}%0A
+Telefone: ${telefone}%0A
+Origem: ${origem}%0A
+Destino: ${destino}`;
+
+  let numero = "5511972531443";
+
+  window.open(`https://wa.me/${numero}?text=${msg}`, "_blank");
+});
+</script>
 
 <p>📧 contato@tranzcarro.online</p>
 <p>📞 (11) 97253-1443</p>
