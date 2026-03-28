@@ -68,7 +68,6 @@ header .menu a {
     background-size: cover;
 }
 
-/* TEXTO */
 .banner-texto { 
     text-align:center; 
     padding:40px 20px; 
@@ -108,10 +107,6 @@ section { padding:60px 20px; max-width:1100px; margin:auto; text-align:center; }
 .carousel { display:flex; overflow-x:auto; gap:15px; }
 .carousel img { width:280px; border-radius:8px; }
 
-/* AVALIAÇÕES */
-.avaliacoes { display:grid; gap:20px; }
-.box { background: var(--cinza); padding:15px; border-left:5px solid var(--azul-claro); border-radius:6px; text-align:left; }
-
 /* FORMULÁRIO */
 form input, form button {
     width:100%;
@@ -139,6 +134,18 @@ form label {
 }
 
 form label input { margin-right:10px; }
+
+.privacidade {
+    font-size:13px;
+    max-width:400px;
+    margin:10px auto;
+    color:#555;
+}
+
+/* FAQ */
+.faq { text-align:left; max-width:800px; margin:auto; }
+.faq-item { margin-bottom:15px; }
+.faq-item h4 { color: var(--azul); }
 
 /* WHATS */
 .whatsapp {
@@ -173,7 +180,6 @@ footer {
     font-size:14px;
 }
 
-/* RESPONSIVO */
 @media(max-width:768px){
     header {
         flex-direction: column;
@@ -199,7 +205,7 @@ footer {
 <div class="menu">
 <a href="#servicos">Serviços</a>
 <a href="#como">Como Funciona</a>
-<a href="#avaliacoes">Avaliações</a>
+<a href="#faq">FAQ</a>
 <a href="#contato">Contato</a>
 </div>
 </header>
@@ -209,15 +215,18 @@ footer {
 <section class="banner-texto">
 <h1>Transporte de Veículos para Todo o Brasil</h1>
 <p>Transporte de veículos com segurança, planejamento logístico e atendimento profissional.</p>
-
 <p><strong>O prazo e o valor do transporte variam conforme a origem, destino e tipo do veículo.</strong></p>
-
 <a href="https://wa.me/5511972531443" class="btn">Falar no WhatsApp</a>
+</section>
+
+<section>
+<h2>Sobre a Tranzcarro</h2>
+<p>Somos uma empresa especializada no transporte de veículos em todo o Brasil, oferecendo soluções logísticas com segurança, planejamento e transparência.</p>
+<p>Atuamos com organização de rotas, acompanhamento do transporte e atendimento direto ao cliente em todas as etapas.</p>
 </section>
 
 <section id="servicos">
 <h2>Nossos Serviços</h2>
-
 <div class="servicos">
 <div class="servico-box">
 <h3>🚗 Transporte de Carros</h3>
@@ -262,14 +271,31 @@ footer {
 </div>
 </section>
 
-<section id="avaliacoes">
-<h2>Avaliações</h2>
+<section id="faq">
+<h2>Perguntas Frequentes</h2>
 
-<div class="avaliacoes">
-<div class="box">⭐⭐⭐⭐⭐ Cliente - São Paulo/SP (SP → RJ)</div>
-<div class="box">⭐⭐⭐⭐⭐ Cliente - Minas Gerais (entrega no prazo)</div>
-<div class="box">⭐⭐⭐⭐⭐ Cliente - Paraná (atendimento rápido)</div>
-<div class="box">⭐⭐⭐⭐⭐ Cliente - Goiás (transporte seguro)</div>
+<div class="faq">
+
+<div class="faq-item">
+<h4>Quanto custa o transporte?</h4>
+<p>O valor depende da origem, destino, tipo de veículo e disponibilidade de rota.</p>
+</div>
+
+<div class="faq-item">
+<h4>Qual o prazo de entrega?</h4>
+<p>O prazo varia conforme a distância e logística da rota, sendo informado na cotação.</p>
+</div>
+
+<div class="faq-item">
+<h4>O veículo vai segurado?</h4>
+<p>Trabalhamos com transporte planejado e orientamos o cliente sobre as condições no momento da contratação.</p>
+</div>
+
+<div class="faq-item">
+<h4>Atende todo o Brasil?</h4>
+<p>Sim, realizamos transporte interestadual em diversas rotas.</p>
+</div>
+
 </div>
 </section>
 
@@ -291,6 +317,10 @@ Eu li e concordo com os
 <a href="politica.html" target="_blank">Política de Privacidade</a>
 </label>
 
+<p class="privacidade">
+Seus dados são utilizados exclusivamente para contato sobre o serviço solicitado.
+</p>
+
 <button type="submit">Enviar</button>
 </form>
 
@@ -303,8 +333,7 @@ Eu li e concordo com os
 
 <section>
 <h2>Localização</h2>
-
-<p>📍 R. José Mascarenhas, 704 - Vila Aricanduva, São Paulo - SP</p>
+<p>📍 R. José Mascarenhas, 704 - São Paulo - SP</p>
 
 <iframe 
 src="https://www.google.com/maps?q=R.+José+Mascarenhas,+704+-+São+Paulo&output=embed"
@@ -313,7 +342,6 @@ height="300"
 style="border:0;" 
 loading="lazy">
 </iframe>
-
 </section>
 
 <footer>
